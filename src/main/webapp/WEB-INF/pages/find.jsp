@@ -47,7 +47,7 @@
     </style>
 </head>
 <body>
-<a href="${pageContext.request.contextPath}">Back to main menu</a>
+<a href="${pageContext.request.contextPath}/users">Back to main menu</a>
 
 <br/>
 <br/>

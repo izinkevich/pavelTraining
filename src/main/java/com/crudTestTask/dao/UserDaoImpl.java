@@ -1,5 +1,7 @@
 package com.crudTestTask.dao;
 
+
+
 import java.util.List;
 
 import org.hibernate.Query;
@@ -66,25 +68,20 @@ public class UserDaoImpl implements UserDao {
 
         return userList;
     }
-    
 
-	@Override
+
+    @Override
     @SuppressWarnings("unchecked")
     public List<User> listUserBy(User user) {
         Session session = this.sessionFactory.getCurrentSession();
-        Query query = session.createQuery("from User where Name like :name and Age = :age and IsAdmin = :isAdmin");
+        Query query = session.createQuery("from User where Name like :name");
         String name = user.getName();
-        int age = user.getAge();
-        boolean isAdmin = user.isAdmin();
         if (name != null && !name.isEmpty()) {
             query = query.setParameter("name", name);
         } else {
             query = query.setParameter("name", "%");
         }
 
-        query = query.setParameter("age", age);
-        query = query.setParameter("isAdmin", isAdmin);
-        
         List<User> userList = query.list();
 
         for (User userFromList: userList){
