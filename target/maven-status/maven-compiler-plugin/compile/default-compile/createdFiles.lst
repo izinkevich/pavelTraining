@@ -1,6 +1,0 @@
-com\crudTestTask\controller\UserController.class
-com\crudTestTask\service\UserServiceImpl.class
-com\crudTestTask\dao\UserDao.class
-com\crudTestTask\service\UserService.class
-com\crudTestTask\user\User.class
-com\crudTestTask\dao\UserDaoImpl.class
